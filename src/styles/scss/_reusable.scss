@@ -1,0 +1,29 @@
+@use 'default/variables' as *;
+
+.red-btn {
+  text-transform: uppercase;
+  background: $primary-color;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+  transition: all .2s;
+
+  &:hover {
+    background-color: #ffffff;
+    color: $primary-color;
+  }
+}
+
+.animate-infinite {
+  animation-iteration-count: infinite;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.red-text-underline {
+  color: $primary-color;
+  text-decoration-line: underline;
+}

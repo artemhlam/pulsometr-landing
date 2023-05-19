@@ -1,0 +1,81 @@
+@use '../default' as *;
+
+.header {
+  position: absolute;
+  top: 21px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint-max('small') {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__logo {
+    width: 250px;
+
+    @include breakpoint-max('small') {
+      width: 164px;
+    }
+  }
+
+  &__official {
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    & span {
+      display: block;
+      font-size: 18px;
+      line-height: 29px;
+
+      @include breakpoint-max('small') {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    @include breakpoint-max('small') {
+      text-align: right;
+    }
+  }
+
+  &__call {
+    display: flex;
+    flex-direction: column;
+
+    &-tel {
+      font-weight: 700;
+      font-size: 18px;
+
+      @include breakpoint-max('small') {
+        font-size: 14px;
+      }
+    }
+    &-btn {
+      margin-top: 4px;
+      width: 153px;
+      height: 32px;
+      align-self: flex-end;
+      @include breakpoint-max('small') {
+        align-self: normal;
+        width: 132px;
+        height: 28px;
+        font-size: 12px;
+      }
+    }
+
+    @include breakpoint-max('small') {
+      grid-column: span 2;
+      margin-top: 20px;
+      margin-left: auto;
+    }
+  }
+}

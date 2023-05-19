@@ -1,0 +1,39 @@
+@use '../default' as *;
+
+.consult {
+  height: 680px;
+  padding: 100px 0 108px 0;
+  background: url("../../assets/images/consultation/bg.jpg") center/cover no-repeat;
+  color: #fff;
+
+  &__title {
+    max-width: 800px;
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    @include breakpoint-max('small') {
+      font-size: 30px;
+    }
+  }
+  &__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 36px;
+
+    @include breakpoint-max('small') {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__form {
+    max-width: 300px;
+
+    & .input-error {
+      padding: 2px;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+  }
+}

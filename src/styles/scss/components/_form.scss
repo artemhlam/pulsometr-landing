@@ -1,0 +1,48 @@
+@use '../default' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  & * {
+    width: 100%;
+  }
+
+  & input {
+    border-radius: 6px;
+    color: #000;
+    font-size: 14px;
+    padding: 20px;
+    margin-top: 12px;
+
+    &::placeholder {
+      color: $grey-color;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.invalid {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  & .input-error {
+    color: $primary-color;
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  & button {
+    margin-top: 18px;
+    padding: 18px 0;
+    color: #fff;
+  }
+}
